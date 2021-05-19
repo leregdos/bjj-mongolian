@@ -19,18 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1db537d4-2317-4cb3-8517-85f568cf91c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/FreeSans.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/FreeSansBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/FreeSansOblique.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/RobotoMono-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/RobotoMono-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/RobotoMono-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/pointsPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bjj_mongolian_rulebook/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/pubspec.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="1db537d4-2317-4cb3-8517-85f568cf91c7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
