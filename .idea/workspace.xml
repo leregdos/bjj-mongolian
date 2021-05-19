@@ -20,14 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1db537d4-2317-4cb3-8517-85f568cf91c7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/FreeSans.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/FreeSansBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/FreeSansOblique.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/RobotoMono-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/RobotoMono-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/RobotoMono-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/pointsPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bjj_mongolian_rulebook/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,9 +56,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bjj_mongolian_rulebook" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main" type="FlutterRunConfigurationType" factoryName="Flutter">
@@ -90,5 +112,21 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="172" y="127" width="1648" height="853" key="AVDManager/72.27.1848.1053@72.27.1848.1053" timestamp="1621388377977" />
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1621390431841">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1621390431841" />
+    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1621390431841">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1621390431841" />
+    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1621390431840">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1621390431840" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1621390431841">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1621390431841" />
   </component>
 </project>
