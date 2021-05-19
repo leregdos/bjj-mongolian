@@ -2,6 +2,8 @@ import 'package:bjj_mongolian_rulebook/placeHolder.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'placeHolder.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -13,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
+        bottomAppBarColor: Colors.grey,
       ),
       home: MyHomePage(title: 'Rulebook'),
     );
@@ -36,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
     PlaceholderWidget(Colors.deepOrange),
     PlaceholderWidget(Colors.green),
     PlaceholderWidget(Colors.black),
+    PlaceholderWidget(Colors.red),
   ];
 
   void onTabTapped(int index) {
@@ -55,25 +59,27 @@ class _MyHomePageState extends State<MyHomePage> {
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.grey,
             label: "Fouls",
             icon: Icon(FontAwesomeIcons.times),
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.grey,
             label: "Duration",
             icon: Icon(FontAwesomeIcons.clock),
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.grey,
             label: "Weight",
             icon: Icon(FontAwesomeIcons.weightHanging),
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.grey,
             label: "Points",
             icon: Icon(FontAwesomeIcons.check),
           ),
+          BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.commentDots), label: "More")
         ],
       ),
       body: children[_currentIndex],
