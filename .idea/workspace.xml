@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1db537d4-2317-4cb3-8517-85f568cf91c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/durationPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bjj_mongolian_rulebook/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bjj_mongolian_rulebook/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/durationPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/durationPage.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +96,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="454" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1621010365657" />
+    <state x="693" y="355" width="596" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621773772114">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="693" y="355" width="596" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1621773772114" />
     <state x="610" y="292" width="762" height="529" key="#main" timestamp="1621010318327">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
