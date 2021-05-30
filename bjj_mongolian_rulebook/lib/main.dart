@@ -1,3 +1,4 @@
+import 'package:bjj_mongolian_rulebook/durationPage.dart';
 import 'package:bjj_mongolian_rulebook/placeHolder.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
   final List<Widget> children = [
     PlaceholderWidget(Colors.white),
-    PlaceholderWidget(Colors.deepOrange),
+    DurationPage(),
     PlaceholderWidget(Colors.green),
     PointsPage(),
     PlaceholderWidget(Colors.red),

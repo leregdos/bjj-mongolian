@@ -20,16 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1db537d4-2317-4cb3-8517-85f568cf91c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/FreeSans.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/FreeSansBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/FreeSansOblique.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/RobotoMono-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/RobotoMono-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts/RobotoMono-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/pointsPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bjj_mongolian_rulebook/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/durationPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bjj_mongolian_rulebook/lib/durationPage.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +48,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bjj_mongolian_rulebook/assets/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -104,29 +96,41 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="454" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1621010365657" />
+    <state x="693" y="355" width="596" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621773772114">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="693" y="355" width="596" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1621773772114" />
     <state x="610" y="292" width="762" height="529" key="#main" timestamp="1621010318327">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="610" y="292" width="762" height="529" key="#main/72.27.1848.1053@72.27.1848.1053" timestamp="1621010318327" />
-    <state x="172" y="127" width="1648" height="853" key="AVDManager" timestamp="1621388377977">
+    <state x="172" y="127" width="1648" height="853" key="AVDManager" timestamp="1622360091231">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="172" y="127" width="1648" height="853" key="AVDManager/72.27.1848.1053@72.27.1848.1053" timestamp="1621388377977" />
-    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1621390431841">
+    <state x="172" y="127" width="1648" height="853" key="AVDManager/72.27.1848.1053@72.27.1848.1053" timestamp="1622360091231" />
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1621826618544">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1621390431841" />
-    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1621390431841">
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1621826618544" />
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1621775263902">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1621390431841" />
-    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1621390431840">
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1621775263902" />
+    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1621775263902">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1621390431840" />
-    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1621390431841">
+    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1621775263902" />
+    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1621775263901">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1621390431841" />
+    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1621775263901" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1621775263902">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1621775263902" />
+    <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1621599298472">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1621599298472" />
   </component>
 </project>
