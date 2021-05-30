@@ -1,4 +1,5 @@
 import 'package:bjj_mongolian_rulebook/durationPage.dart';
+import 'package:bjj_mongolian_rulebook/foulsPage.dart';
 import 'package:bjj_mongolian_rulebook/placeHolder.dart';
 import 'package:bjj_mongolian_rulebook/weightPage.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +45,7 @@ class BottomTab extends StatefulWidget {
 class _BottomTabState extends State<BottomTab> {
   int _currentIndex = 0;
   final List<Widget> children = [
-    PlaceholderWidget(Colors.white),
+    FoulsPage(),
     DurationPage(),
     WeightPage(),
     PointsPage(),
