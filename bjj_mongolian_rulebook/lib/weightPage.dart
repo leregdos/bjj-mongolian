@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
@@ -38,9 +39,8 @@ class _WeightPageState extends State<WeightPage> {
     'Masters'
   ];
   List<int> ageList = [10, 12, 14, 16, 18, 18, 35];
-  // List<String> durationList = ['1.5', '3', '3', '3', '4', '5', '6', '5'];
   int age = 18;
-  // String duration = '6';
+  int initialIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class _WeightPageState extends State<WeightPage> {
             children: [
               ToggleSwitch(
                 minWidth: 90.0,
-                initialLabelIndex: 1,
+                initialLabelIndex: initialIndex,
                 cornerRadius: 20.0,
                 activeFgColor: Colors.white,
                 inactiveBgColor: Colors.grey,
@@ -72,7 +72,10 @@ class _WeightPageState extends State<WeightPage> {
                 icons: [FontAwesomeIcons.mars, FontAwesomeIcons.venus],
                 activeBgColors: [Colors.blue, Colors.pink],
                 onToggle: (index) {
-                  index == 0 ? gender = 'Male' : gender = 'Female';
+                  setState(() {
+                    index == 0 ? gender = 'Male' : gender = 'Female';
+                    initialIndex = index;
+                  });
                 },
               ),
             ],
@@ -103,21 +106,37 @@ class _WeightPageState extends State<WeightPage> {
                 fontWeight: FontWeight.bold),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Card(
-            elevation: 5.0,
-            child: Padding(
-              padding: const EdgeInsets.all(13.0),
-              child: Container(
-                child: Text(
-                  ' minutes',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontFamily: 'FreeSans',
+        // gender == 'Male' ? maleWeightDivision[dropdownValue]
+        Expanded(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                for (var item in gender == 'Male'
+                    ? maleWeightDivision[dropdownValue]
+                    : femaleWeightDivision[dropdownValue])
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Card(
+                      elevation: 5.0,
+                      child: Padding(
+                        padding: const EdgeInsets.all(13.0),
+                        child: Center(
+                          child: Container(
+                            child: Text(
+                              '$item kg',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'FreeSans',
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-              ),
+              ],
             ),
           ),
         ),
