@@ -48,7 +48,6 @@ class _MyHomePageState extends State<MyHomePage> {
     DurationPage(),
     WeightPage(),
     PointsPage(),
-    PlaceholderWidget(Colors.red),
   ];
 
   void onTabTapped(int index) {
@@ -87,10 +86,10 @@ class _MyHomePageState extends State<MyHomePage> {
             label: "Points",
             icon: Icon(FontAwesomeIcons.check),
           ),
-          BottomNavigationBarItem(
-              icon: Icon(FontAwesomeIcons.commentDots),
-              label: "More",
-              backgroundColor: Colors.grey)
+          // BottomNavigationBarItem(
+          //     icon: Icon(FontAwesomeIcons.commentDots),
+          //     label: "More",
+          //     backgroundColor: Colors.grey)
         ],
       ),
       body: children[_currentIndex],
