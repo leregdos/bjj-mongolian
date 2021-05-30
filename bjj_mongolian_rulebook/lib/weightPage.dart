@@ -8,10 +8,27 @@ class WeightPage extends StatefulWidget {
 }
 
 class _WeightPageState extends State<WeightPage> {
+  Map maleWeightDivision = {
+    'U10+': ['21', '24', '27', '30', '34', '38', '42', '42+'],
+    'U14': ['24', '27', '30', '34', '38', '42', '46', '50', '50+'],
+    'U14+': ['30', '34', '38', '42', '46', '50', '55', '60', '66', '66+'],
+    'U16+': ['38', '42', '46', '50', '55', '60', '66', '73', '73+'],
+    'U18+': ['46', '50', '55', '60', '66', '73', '81', '81+'],
+    'Adults': ['56', '62', '69', '77', '85', '94', '94+'],
+    'Masters': ['56', '62', '69', '77', '85', '94', '94+']
+  };
+  Map femaleWeightDivision = {
+    'U10+': ['20', '22', '25', '28', '32', '36', '40', '40+'],
+    'U14': ['22', '25', '28', '32', '36', '40', '44', '48', '48+'],
+    'U14+': ['25', '28', '32', '36', '40', '44', '48', '52', '57', '57+'],
+    'U16+': ['32', '36', '40', '44', '48', '52', '57', '63', '63+'],
+    'U18+': ['40', '44', '48', '52', '57', '63', '70', '70+'],
+    'Adults': ['45', '48', '52', '57', '63', '70', '70+'],
+    'Masters': ['45', '48', '52', '57', '63', '70', '70+']
+  };
   String gender = 'Male';
   String dropdownValue = 'Adults';
   List<String> divisionList = [
-    'U8+',
     'U10+',
     'U14',
     'U14+',
@@ -20,10 +37,10 @@ class _WeightPageState extends State<WeightPage> {
     'Adults',
     'Masters'
   ];
-  List<int> ageList = [8, 10, 12, 14, 16, 18, 18, 35];
-  List<String> durationList = ['1.5', '3', '3', '3', '4', '5', '6', '5'];
+  List<int> ageList = [10, 12, 14, 16, 18, 18, 35];
+  // List<String> durationList = ['1.5', '3', '3', '3', '4', '5', '6', '5'];
   int age = 18;
-  String duration = '6';
+  // String duration = '6';
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +111,7 @@ class _WeightPageState extends State<WeightPage> {
               padding: const EdgeInsets.all(13.0),
               child: Container(
                 child: Text(
-                  '$duration minutes',
+                  ' minutes',
                   style: TextStyle(
                     fontSize: 15,
                     fontFamily: 'FreeSans',
@@ -130,7 +147,6 @@ class _WeightPageState extends State<WeightPage> {
                 setState(() {
                   dropdownValue = newValue;
                   age = ageList[divisionList.indexOf(newValue)];
-                  duration = durationList[divisionList.indexOf(newValue)];
                 });
               },
               items: divisionList.map<DropdownMenuItem<String>>((String value) {
