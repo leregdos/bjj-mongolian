@@ -27,21 +27,21 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.grey,
         bottomAppBarColor: Colors.grey,
       ),
-      home: MyHomePage(title: 'Rulebook'),
+      home: BottomTab(title: 'Rulebook'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class BottomTab extends StatefulWidget {
+  BottomTab({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _BottomTabState createState() => _BottomTabState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _BottomTabState extends State<BottomTab> {
   int _currentIndex = 0;
   final List<Widget> children = [
     PlaceholderWidget(Colors.white),
