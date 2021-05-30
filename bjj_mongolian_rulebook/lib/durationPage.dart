@@ -6,22 +6,21 @@ class DurationPage extends StatefulWidget {
 }
 
 class _DurationPageState extends State<DurationPage> {
-  String dropdownValue = 'Adult';
-  String dropdownValueBelt = 'White';
+  String dropdownValue = 'Adults';
   List<String> divisionList = [
-    'Kids 1',
-    'Kids 2',
-    'Kids 3',
-    'Infant',
-    'Junior',
-    'Teen',
-    'Juvenile',
-    'Adult',
-    'Master'
+    'U8+',
+    'U10+',
+    'U14',
+    'U14+',
+    'U16+',
+    'U18+',
+    'Adults',
+    'Masters'
   ];
-  List<int> ageList = [4, 6, 8, 10, 12, 14, 16, 18, 30];
-  List<String> beltList = ['White', 'Blue', 'Purple', 'Brown', 'Black'];
+  List<int> ageList = [8, 10, 12, 14, 16, 18, 18, 35];
+  List<String> durationList = ['1.5', '3', '3', '3', '4', '5', '6', '5'];
   int age = 18;
+  String duration = '6';
 
   @override
   Widget build(BuildContext context) {
@@ -40,39 +39,9 @@ class _DurationPageState extends State<DurationPage> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Card(
+            elevation: 5.0,
             child: buildDropdownButton(),
           ),
-        ),
-        ListTile(
-          title: Text(
-            'BELT',
-            style: TextStyle(
-                fontSize: 16,
-                fontFamily: 'FreeSans',
-                fontWeight: FontWeight.bold),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: divisionList.indexOf(dropdownValue) > 6
-              ? Card(child: buildBeltDropdownButton())
-              : Card(
-                  elevation: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Container(
-                      height: 16,
-                      child: Text(
-                        'All Belts',
-                        style: TextStyle(
-                          color: Colors.deepPurple,
-                          fontSize: 15,
-                          fontFamily: 'FreeSans',
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
         ),
         ListTile(
           title: Text(
@@ -83,43 +52,25 @@ class _DurationPageState extends State<DurationPage> {
                 fontWeight: FontWeight.bold),
           ),
         ),
-      ],
-    );
-  }
-
-  Widget buildBeltDropdownButton() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Container(
-            child: DropdownButton<String>(
-              value: dropdownValueBelt,
-              icon: const Icon(Icons.arrow_downward),
-              iconSize: 24,
-              elevation: 16,
-              style: const TextStyle(
-                  color: Colors.deepPurple, fontFamily: 'FreeSans'),
-              underline: Container(
-                height: 2,
-                color: Colors.deepPurpleAccent,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Card(
+            elevation: 5.0,
+            child: Padding(
+              padding: const EdgeInsets.all(13.0),
+              child: Container(
+                child: Text(
+                  '$duration minutes',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontFamily: 'FreeSans',
+                  ),
+                ),
               ),
-              onChanged: (String newValue) {
-                setState(() {
-                  dropdownValueBelt = newValue;
-                });
-              },
-              items: beltList.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
@@ -145,6 +96,7 @@ class _DurationPageState extends State<DurationPage> {
                 setState(() {
                   dropdownValue = newValue;
                   age = ageList[divisionList.indexOf(newValue)];
+                  duration = durationList[divisionList.indexOf(newValue)];
                 });
               },
               items: divisionList.map<DropdownMenuItem<String>>((String value) {
