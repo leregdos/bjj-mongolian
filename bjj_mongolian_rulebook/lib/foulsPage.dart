@@ -1,5 +1,6 @@
 import 'package:bjj_mongolian_rulebook/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class FoulsPage extends StatefulWidget {
   @override
@@ -54,14 +55,108 @@ class _FoulsPageState extends State<FoulsPage> {
               scrollDirection: Axis.vertical,
               child: Column(
                 children: [
-                  for (var item in foulList)
-                    ListTile(
-                      title: Text('$item'),
-                      trailing: Icon(Icons.check),
-                      subtitle: Divider(
-                        color: Colors.grey,
+                  if (dropdownValue == 'All White Belts and All Belts (U18)')
+                    for (var item in foulList)
+                      ListTile(
+                        title: Text('$item'),
+                        trailing: whiteFoul[foulList.indexOf(item)] == true
+                            ? Icon(
+                                FontAwesomeIcons.check,
+                                color: Colors.green,
+                              )
+                            : Icon(
+                                FontAwesomeIcons.times,
+                                color: Colors.red,
+                              ),
+                        subtitle: Divider(
+                          color: Colors.grey,
+                        ),
                       ),
-                    ),
+                  if (dropdownValue == 'U12')
+                    for (var item in foulList)
+                      ListTile(
+                        title: Text('$item'),
+                        trailing: u12Foul[foulList.indexOf(item)] == true
+                            ? Icon(
+                                FontAwesomeIcons.check,
+                                color: Colors.green,
+                              )
+                            : Icon(
+                                FontAwesomeIcons.times,
+                                color: Colors.red,
+                              ),
+                        subtitle: Divider(
+                          color: Colors.grey,
+                        ),
+                      ),
+                  if (dropdownValue == 'U16')
+                    for (var item in foulList)
+                      ListTile(
+                        title: Text('$item'),
+                        trailing: u16Foul[foulList.indexOf(item)] == true
+                            ? Icon(
+                                FontAwesomeIcons.check,
+                                color: Colors.green,
+                              )
+                            : Icon(
+                                FontAwesomeIcons.times,
+                                color: Colors.red,
+                              ),
+                        subtitle: Divider(
+                          color: Colors.grey,
+                        ),
+                      ),
+                  if (dropdownValue == 'Blue and Purple Belts (18+)')
+                    for (var item in foulList)
+                      ListTile(
+                        title: Text('$item'),
+                        trailing: bluePurpleFoul[foulList.indexOf(item)] == true
+                            ? Icon(
+                                FontAwesomeIcons.check,
+                                color: Colors.green,
+                              )
+                            : Icon(
+                                FontAwesomeIcons.times,
+                                color: Colors.red,
+                              ),
+                        subtitle: Divider(
+                          color: Colors.grey,
+                        ),
+                      ),
+                  if (dropdownValue == 'Brown and Black Belts (18+)')
+                    for (var item in foulList)
+                      ListTile(
+                        title: Text('$item'),
+                        trailing: brownBlackFoul[foulList.indexOf(item)] == true
+                            ? Icon(
+                                FontAwesomeIcons.check,
+                                color: Colors.green,
+                              )
+                            : Icon(
+                                FontAwesomeIcons.times,
+                                color: Colors.red,
+                              ),
+                        subtitle: Divider(
+                          color: Colors.grey,
+                        ),
+                      ),
+                  if (dropdownValue == 'Expert')
+                    for (var item in foulList)
+                      ListTile(
+                        title: Text('$item'),
+                        trailing: expertFoul[foulList.indexOf(item)] == true
+                            ? Icon(
+                                FontAwesomeIcons.check,
+                                color: Colors.green,
+                              )
+                            : Icon(
+                                FontAwesomeIcons.times,
+                                color: Colors.red,
+                              ),
+                        subtitle: Divider(
+                          color: Colors.grey,
+                        ),
+                      ),
                 ],
               ),
             ),
