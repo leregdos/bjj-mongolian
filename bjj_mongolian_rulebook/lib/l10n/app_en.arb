@@ -8,5 +8,12 @@
   "weight": "Weight",
   "points": "Points",
   "more": "More",
-  "rulebook": "Rulebook"
+  "rulebook": "Rulebook",
+  "changeLanguage": "Change Language",
+  "version": "Version",
+  "aboutThisApplication": "About this Application",
+  "website": "Website",
+  "rulesOnline": "Rules Online",
+  "rulesDate": "Rules Date",
+  "aboutTheRules": "About the Rules"
 }

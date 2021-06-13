@@ -5,5 +5,12 @@
   "weight": "Жин",
   "points": "Оноо",
   "more": "Илүү",
-  "rulebook": "Дүрмийн ном"
+  "rulebook": "Дүрмийн ном",
+  "changeLanguage": "Хэлээ солих",
+  "version": "Хувилбар",
+  "aboutThisApplication": "Энэ аппликешний талаар",
+  "website": "Вебсайт",
+  "rulesOnline": "Онлайнаар үзэх",
+  "rulesDate": "Дүрмийн огноо",
+  "aboutTheRules": "Дүрмийн талаар"
 }
