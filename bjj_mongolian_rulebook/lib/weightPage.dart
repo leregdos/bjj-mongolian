@@ -30,6 +30,8 @@ class _WeightPageState extends State<WeightPage> {
   };
   String gender = 'Male';
   String dropdownValue = 'Adults';
+  String dropdownValueMn = 'Насанд хүрэгчид';
+
   List<String> divisionList = [
     'U10+',
     'U14',
@@ -38,6 +40,15 @@ class _WeightPageState extends State<WeightPage> {
     'U18+',
     'Adults',
     'Masters'
+  ];
+  List<String> divisionListMn = [
+    'U10+',
+    'U14',
+    'U14+',
+    'U16+',
+    'U18+',
+    'Насанд хүрэгчид',
+    'Мастерс'
   ];
   List<int> ageList = [10, 12, 14, 16, 18, 18, 35];
   int age = 18;
@@ -156,7 +167,9 @@ class _WeightPageState extends State<WeightPage> {
         children: [
           Container(
             child: DropdownButton<String>(
-              value: dropdownValue,
+              value: AppLocalizations.of(context).eng == 'English'
+                  ? dropdownValue
+                  : dropdownValueMn,
               icon: const Icon(Icons.arrow_downward),
               iconSize: 24,
               elevation: 16,
@@ -172,12 +185,20 @@ class _WeightPageState extends State<WeightPage> {
                   age = ageList[divisionList.indexOf(newValue)];
                 });
               },
-              items: divisionList.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
+              items: AppLocalizations.of(context).eng == 'English'
+                  ? divisionList.map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList()
+                  : divisionListMn
+                      .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
             ),
           ),
           Container(

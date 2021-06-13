@@ -8,6 +8,8 @@ class DurationPage extends StatefulWidget {
 
 class _DurationPageState extends State<DurationPage> {
   String dropdownValue = 'Adults';
+  String dropdownValueMn = 'Насанд хүрэгчид';
+
   List<String> divisionList = [
     'U8+',
     'U10+',
@@ -17,6 +19,15 @@ class _DurationPageState extends State<DurationPage> {
     'U18+',
     'Adults',
     'Masters'
+  ];
+  List<String> divisionListMn = [
+    'U10+',
+    'U14',
+    'U14+',
+    'U16+',
+    'U18+',
+    'Насанд хүрэгчид',
+    'Мастерс'
   ];
   List<int> ageList = [8, 10, 12, 14, 16, 18, 18, 35];
   List<String> durationList = ['1.5', '3', '3', '3', '4', '5', '6', '5'];
@@ -83,7 +94,9 @@ class _DurationPageState extends State<DurationPage> {
         children: [
           Container(
             child: DropdownButton<String>(
-              value: dropdownValue,
+              value: AppLocalizations.of(context).eng == 'English'
+                  ? dropdownValue
+                  : dropdownValueMn,
               icon: const Icon(Icons.arrow_downward),
               iconSize: 24,
               elevation: 16,
@@ -100,12 +113,20 @@ class _DurationPageState extends State<DurationPage> {
                   duration = durationList[divisionList.indexOf(newValue)];
                 });
               },
-              items: divisionList.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
+              items: AppLocalizations.of(context).eng == 'English'
+                  ? divisionList.map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList()
+                  : divisionListMn
+                      .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
             ),
           ),
           Container(
