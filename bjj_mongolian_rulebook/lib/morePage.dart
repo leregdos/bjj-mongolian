@@ -1,6 +1,8 @@
+import 'package:bjj_mongolian_rulebook/utilities/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:toggle_switch/toggle_switch.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MorePage extends StatefulWidget {
   @override
@@ -41,34 +43,44 @@ class _MorePageState extends State<MorePage> {
               ],
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(8.0),
-            color: Colors.grey,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Rules Online',
-                  style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
-                ),
-                Text('https://bit.ly/3ggpkQL',
-                    style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
-              ],
+          InkWell(
+            onTap: () async {
+              await launch('https://bit.ly/3ggpkQL');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8.0),
+              color: Colors.grey,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Rules Online',
+                    style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
+                  ),
+                  Text('https://bit.ly/3ggpkQL',
+                      style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
+                ],
+              ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(8.0),
-            color: Colors.grey,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Website',
-                  style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
-                ),
-                Text('http://jjau.org/index.php?id=2',
-                    style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
-              ],
+          InkWell(
+            onTap: () async {
+              await launch('http://jjau.org/index.php?id=2');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8.0),
+              color: Colors.grey,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Website',
+                    style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
+                  ),
+                  Text('http://jjau.org/index.php?id=2',
+                      style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
+                ],
+              ),
             ),
           ),
           ListTile(
