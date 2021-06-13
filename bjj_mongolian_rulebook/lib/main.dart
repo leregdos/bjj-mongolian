@@ -1,5 +1,6 @@
 import 'package:bjj_mongolian_rulebook/durationPage.dart';
 import 'package:bjj_mongolian_rulebook/foulsPage.dart';
+import 'package:bjj_mongolian_rulebook/morePage.dart';
 import 'package:bjj_mongolian_rulebook/weightPage.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -47,6 +48,7 @@ class _BottomTabState extends State<BottomTab> {
     DurationPage(),
     WeightPage(),
     PointsPage(),
+    MorePage()
   ];
 
   void onTabTapped(int index) {
@@ -85,10 +87,10 @@ class _BottomTabState extends State<BottomTab> {
             label: "Points",
             icon: Icon(FontAwesomeIcons.check),
           ),
-          // BottomNavigationBarItem(
-          //     icon: Icon(FontAwesomeIcons.commentDots),
-          //     label: "More",
-          //     backgroundColor: Colors.grey)
+          BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.commentDots),
+              label: "More",
+              backgroundColor: Colors.grey)
         ],
       ),
       body: children[_currentIndex],
