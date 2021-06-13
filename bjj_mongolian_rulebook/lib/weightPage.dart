@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:toggle_switch/toggle_switch.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class WeightPage extends StatefulWidget {
   @override
@@ -29,6 +30,8 @@ class _WeightPageState extends State<WeightPage> {
   };
   String gender = 'Male';
   String dropdownValue = 'Adults';
+  String dropdownValueMn = 'Насанд хүрэгчид';
+
   List<String> divisionList = [
     'U10+',
     'U14',
@@ -38,6 +41,33 @@ class _WeightPageState extends State<WeightPage> {
     'Adults',
     'Masters'
   ];
+  List<String> divisionListMn = [
+    'U10+',
+    'U14',
+    'U14+',
+    'U16+',
+    'U18+',
+    'Насанд хүрэгчид',
+    'Мастерс'
+  ];
+  Map maleWeightDivisionMn = {
+    'U10+': ['21', '24', '27', '30', '34', '38', '42', '42+'],
+    'U14': ['24', '27', '30', '34', '38', '42', '46', '50', '50+'],
+    'U14+': ['30', '34', '38', '42', '46', '50', '55', '60', '66', '66+'],
+    'U16+': ['38', '42', '46', '50', '55', '60', '66', '73', '73+'],
+    'U18+': ['46', '50', '55', '60', '66', '73', '81', '81+'],
+    'Насанд хүрэгчид': ['56', '62', '69', '77', '85', '94', '94+'],
+    'Мастерс': ['56', '62', '69', '77', '85', '94', '94+']
+  };
+  Map femaleWeightDivisionMn = {
+    'U10+': ['20', '22', '25', '28', '32', '36', '40', '40+'],
+    'U14': ['22', '25', '28', '32', '36', '40', '44', '48', '48+'],
+    'U14+': ['25', '28', '32', '36', '40', '44', '48', '52', '57', '57+'],
+    'U16+': ['32', '36', '40', '44', '48', '52', '57', '63', '63+'],
+    'U18+': ['40', '44', '48', '52', '57', '63', '70', '70+'],
+    'Насанд хүрэгчид': ['45', '48', '52', '57', '63', '70', '70+'],
+    'Мастерс': ['45', '48', '52', '57', '63', '70', '70+']
+  };
   List<int> ageList = [10, 12, 14, 16, 18, 18, 35];
   int age = 18;
   int initialIndex = 0;
@@ -49,7 +79,7 @@ class _WeightPageState extends State<WeightPage> {
       children: [
         ListTile(
           title: Text(
-            'GENDER',
+            AppLocalizations.of(context).gender,
             style: TextStyle(
                 fontSize: 16,
                 fontFamily: 'FreeSans',
@@ -68,7 +98,10 @@ class _WeightPageState extends State<WeightPage> {
                 activeFgColor: Colors.white,
                 inactiveBgColor: Colors.grey,
                 inactiveFgColor: Colors.white,
-                labels: ['Male', 'Female'],
+                labels: [
+                  AppLocalizations.of(context).male,
+                  AppLocalizations.of(context).female
+                ],
                 icons: [FontAwesomeIcons.mars, FontAwesomeIcons.venus],
                 activeBgColors: [Colors.blue, Colors.pink],
                 onToggle: (index) {
@@ -83,7 +116,7 @@ class _WeightPageState extends State<WeightPage> {
         ),
         ListTile(
           title: Text(
-            'AGE DIVISION',
+            AppLocalizations.of(context).ageDivision,
             style: TextStyle(
                 fontSize: 16,
                 fontFamily: 'FreeSans',
@@ -99,7 +132,7 @@ class _WeightPageState extends State<WeightPage> {
         ),
         ListTile(
           title: Text(
-            'WEIGHT DIVISIONS',
+            AppLocalizations.of(context).weightDivisions,
             style: TextStyle(
                 fontSize: 16,
                 fontFamily: 'FreeSans',
@@ -107,39 +140,73 @@ class _WeightPageState extends State<WeightPage> {
           ),
         ),
         // gender == 'Male' ? maleWeightDivision[dropdownValue]
-        Expanded(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                for (var item in gender == 'Male'
-                    ? maleWeightDivision[dropdownValue]
-                    : femaleWeightDivision[dropdownValue])
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Card(
-                      elevation: 5.0,
-                      child: Padding(
-                        padding: const EdgeInsets.all(13.0),
-                        child: Center(
-                          child: Container(
-                            child: Text(
-                              '$item kg',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontFamily: 'FreeSans',
+        AppLocalizations.of(context).eng == 'English'
+            ? Expanded(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      for (var item in gender == 'Male'
+                          ? maleWeightDivision[dropdownValue]
+                          : femaleWeightDivision[dropdownValue])
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                          child: Card(
+                            elevation: 5.0,
+                            child: Padding(
+                              padding: const EdgeInsets.all(13.0),
+                              child: Center(
+                                child: Container(
+                                  child: Text(
+                                    '$item kg',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontFamily: 'FreeSans',
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                    ),
+                    ],
                   ),
-              ],
-            ),
-          ),
-        ),
+                ),
+              )
+            : Expanded(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      for (var item in gender == 'Male'
+                          ? maleWeightDivisionMn[dropdownValueMn]
+                          : femaleWeightDivisionMn[dropdownValueMn])
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                          child: Card(
+                            elevation: 5.0,
+                            child: Padding(
+                              padding: const EdgeInsets.all(13.0),
+                              child: Center(
+                                child: Container(
+                                  child: Text(
+                                    '$item kg',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontFamily: 'FreeSans',
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+              ),
       ],
     );
   }
@@ -152,7 +219,9 @@ class _WeightPageState extends State<WeightPage> {
         children: [
           Container(
             child: DropdownButton<String>(
-              value: dropdownValue,
+              value: AppLocalizations.of(context).eng == 'English'
+                  ? dropdownValue
+                  : dropdownValueMn,
               icon: const Icon(Icons.arrow_downward),
               iconSize: 24,
               elevation: 16,
@@ -164,21 +233,33 @@ class _WeightPageState extends State<WeightPage> {
               ),
               onChanged: (String newValue) {
                 setState(() {
-                  dropdownValue = newValue;
-                  age = ageList[divisionList.indexOf(newValue)];
+                  AppLocalizations.of(context).eng == 'English'
+                      ? dropdownValue = newValue
+                      : dropdownValueMn = newValue;
+                  age = AppLocalizations.of(context).eng == 'English'
+                      ? ageList[divisionList.indexOf(newValue)]
+                      : ageList[divisionListMn.indexOf(newValue)];
                 });
               },
-              items: divisionList.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
+              items: AppLocalizations.of(context).eng == 'English'
+                  ? divisionList.map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList()
+                  : divisionListMn
+                      .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
             ),
           ),
           Container(
             child: Text(
-              '(Current year) - (Birth year) >= $age',
+              '${AppLocalizations.of(context).currentMinusBirth} $age',
               style: TextStyle(
                 fontSize: 13,
                 fontFamily: 'FreeSans',

@@ -1,0 +1,37 @@
+{
+  "eng": "English",
+  "helloWorld": "Hello World!",
+  "@helloWorld": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "fouls": "Fouls",
+  "duration": "Duration",
+  "weight": "Weight",
+  "points": "Points",
+  "more": "More",
+  "rulebook": "Rulebook",
+  "changeLanguage": "Change Language",
+  "version": "Version",
+  "aboutThisApplication": "About this Application",
+  "website": "Website",
+  "rulesOnline": "Rules Online",
+  "rulesDate": "Rules Date",
+  "aboutTheRules": "About the Rules",
+  "twoPointsCaps": "2 POINTS",
+  "threePointsCaps": "3 POINTS",
+  "fourPointsCaps": "4 POINTS",
+  "gender": "GENDER",
+  "male": "Male",
+  "female": "Female",
+  "ageDivision": "AGE DIVISION",
+  "weightDivisions": "WEIGHT DIVISIONS",
+  "division": "DIVISION",
+  "durationCaps": "DURATION",
+  "severeTechnicalFouls": "SEVERE TECHNICAL FOULS",
+  "twoPoints": "2 Points",
+  "threePoints": "3 Points",
+  "fourPoints": "4 Points",
+  "currentMinusBirth": "(Current year) - (Birth year) >=",
+  "minutes": "minutes"
+
+}

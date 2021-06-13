@@ -1,6 +1,7 @@
 import 'package:bjj_mongolian_rulebook/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FoulsPage extends StatefulWidget {
   @override
@@ -9,6 +10,8 @@ class FoulsPage extends StatefulWidget {
 
 class _FoulsPageState extends State<FoulsPage> {
   String dropdownValue = 'All White Belts and All Belts (U18)';
+  String dropdownValueMn = 'Цагаан бүстнүүд болон бүх өнгийн U18';
+
   List<String> divisionList = [
     'U12',
     'U16',
@@ -16,6 +19,14 @@ class _FoulsPageState extends State<FoulsPage> {
     'Blue and Purple Belts (18+)',
     'Brown and Black Belts (18+)',
     'Expert',
+  ];
+  List<String> divisionListMn = [
+    'U12',
+    'U16',
+    'Цагаан бүстнүүд болон бүх өнгийн U18',
+    'Цэнхэр болон ягаан бүстнүүд (18+)',
+    'Бор болон хар бүстнүүд (18+)',
+    'Их мастер',
   ];
 
   @override
@@ -27,7 +38,7 @@ class _FoulsPageState extends State<FoulsPage> {
         children: [
           ListTile(
             title: Text(
-              'DIVISION',
+              AppLocalizations.of(context).division,
               style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'FreeSans',
@@ -43,7 +54,7 @@ class _FoulsPageState extends State<FoulsPage> {
           ),
           ListTile(
             title: Text(
-              'SEVERE TECHNICAL FOULS',
+              AppLocalizations.of(context).severeTechnicalFouls,
               style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'FreeSans',

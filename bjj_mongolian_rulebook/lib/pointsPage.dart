@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class PointsPage extends StatelessWidget {
   @override
@@ -10,7 +11,7 @@ class PointsPage extends StatelessWidget {
         children: [
           ListTile(
             title: Text(
-              '2 POINTS',
+              AppLocalizations.of(context).twoPointsCaps,
               style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'FreeSans',
@@ -27,7 +28,7 @@ class PointsPage extends StatelessWidget {
                   'Takedown',
                   style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
                 ),
-                Text('2 Points',
+                Text(AppLocalizations.of(context).twoPoints,
                     style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
               ],
             ),
@@ -42,7 +43,7 @@ class PointsPage extends StatelessWidget {
                   'Knee on Belly',
                   style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
                 ),
-                Text('2 Points',
+                Text(AppLocalizations.of(context).twoPoints,
                     style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
               ],
             ),
@@ -57,14 +58,14 @@ class PointsPage extends StatelessWidget {
                   'Sweep',
                   style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
                 ),
-                Text('2 Points',
+                Text(AppLocalizations.of(context).twoPoints,
                     style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
               ],
             ),
           ),
           ListTile(
             title: Text(
-              '3 POINTS',
+              AppLocalizations.of(context).threePointsCaps,
               style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'FreeSans',
@@ -81,14 +82,14 @@ class PointsPage extends StatelessWidget {
                   'Guard Pass',
                   style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
                 ),
-                Text('3 Points',
+                Text(AppLocalizations.of(context).threePoints,
                     style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
               ],
             ),
           ),
           ListTile(
             title: Text(
-              '4 POINTS',
+              AppLocalizations.of(context).fourPointsCaps,
               style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'FreeSans',
@@ -105,7 +106,7 @@ class PointsPage extends StatelessWidget {
                   'Mount',
                   style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
                 ),
-                Text('4 Points',
+                Text(AppLocalizations.of(context).fourPoints,
                     style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
               ],
             ),
@@ -120,7 +121,7 @@ class PointsPage extends StatelessWidget {
                   'Back Mount',
                   style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
                 ),
-                Text('4 Points',
+                Text(AppLocalizations.of(context).fourPoints,
                     style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
               ],
             ),
@@ -135,7 +136,7 @@ class PointsPage extends StatelessWidget {
                   'Back Control',
                   style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
                 ),
-                Text('4 Points',
+                Text(AppLocalizations.of(context).fourPoints,
                     style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
               ],
             ),

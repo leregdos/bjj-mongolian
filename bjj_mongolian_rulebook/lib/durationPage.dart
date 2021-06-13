@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DurationPage extends StatefulWidget {
   @override
@@ -7,6 +8,8 @@ class DurationPage extends StatefulWidget {
 
 class _DurationPageState extends State<DurationPage> {
   String dropdownValue = 'Adults';
+  String dropdownValueMn = 'Насанд хүрэгчид';
+
   List<String> divisionList = [
     'U8+',
     'U10+',
@@ -16,6 +19,16 @@ class _DurationPageState extends State<DurationPage> {
     'U18+',
     'Adults',
     'Masters'
+  ];
+  List<String> divisionListMn = [
+    'U8+',
+    'U10+',
+    'U14',
+    'U14+',
+    'U16+',
+    'U18+',
+    'Насанд хүрэгчид',
+    'Мастерс'
   ];
   List<int> ageList = [8, 10, 12, 14, 16, 18, 18, 35];
   List<String> durationList = ['1.5', '3', '3', '3', '4', '5', '6', '5'];
@@ -29,7 +42,7 @@ class _DurationPageState extends State<DurationPage> {
       children: [
         ListTile(
           title: Text(
-            'DIVISION',
+            AppLocalizations.of(context).division,
             style: TextStyle(
                 fontSize: 16,
                 fontFamily: 'FreeSans',
@@ -45,7 +58,7 @@ class _DurationPageState extends State<DurationPage> {
         ),
         ListTile(
           title: Text(
-            'DURATION',
+            AppLocalizations.of(context).durationCaps,
             style: TextStyle(
                 fontSize: 16,
                 fontFamily: 'FreeSans',
@@ -60,7 +73,7 @@ class _DurationPageState extends State<DurationPage> {
               padding: const EdgeInsets.all(13.0),
               child: Container(
                 child: Text(
-                  '$duration minutes',
+                  '$duration ${AppLocalizations.of(context).minutes}',
                   style: TextStyle(
                     fontSize: 15,
                     fontFamily: 'FreeSans',
@@ -82,7 +95,9 @@ class _DurationPageState extends State<DurationPage> {
         children: [
           Container(
             child: DropdownButton<String>(
-              value: dropdownValue,
+              value: AppLocalizations.of(context).eng == 'English'
+                  ? dropdownValue
+                  : dropdownValueMn,
               icon: const Icon(Icons.arrow_downward),
               iconSize: 24,
               elevation: 16,
@@ -94,22 +109,36 @@ class _DurationPageState extends State<DurationPage> {
               ),
               onChanged: (String newValue) {
                 setState(() {
-                  dropdownValue = newValue;
-                  age = ageList[divisionList.indexOf(newValue)];
-                  duration = durationList[divisionList.indexOf(newValue)];
+                  if (AppLocalizations.of(context).eng == 'English') {
+                    dropdownValue = newValue;
+                    age = ageList[divisionList.indexOf(newValue)];
+                    duration = durationList[divisionList.indexOf(newValue)];
+                  } else {
+                    dropdownValueMn = newValue;
+                    age = ageList[divisionListMn.indexOf(newValue)];
+                    duration = durationList[divisionListMn.indexOf(newValue)];
+                  }
                 });
               },
-              items: divisionList.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
+              items: AppLocalizations.of(context).eng == 'English'
+                  ? divisionList.map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList()
+                  : divisionListMn
+                      .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
             ),
           ),
           Container(
             child: Text(
-              '(Current year) - (Birth year) >= $age',
+              '${AppLocalizations.of(context).currentMinusBirth} $age',
               style: TextStyle(
                 fontSize: 13,
                 fontFamily: 'FreeSans',

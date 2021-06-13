@@ -1,8 +1,9 @@
-import 'package:bjj_mongolian_rulebook/utilities/functions.dart';
+import 'package:bjj_mongolian_rulebook/utilities/providers/appLanguage.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MorePage extends StatefulWidget {
   @override
@@ -10,10 +11,11 @@ class MorePage extends StatefulWidget {
 }
 
 class _MorePageState extends State<MorePage> {
-  int initialIndex = 0;
-  String language = 'English';
   @override
   Widget build(BuildContext context) {
+    AppLanguage appLanguage = Provider.of<AppLanguage>(context);
+    int initialIndex = appLanguage.appLocal == Locale('en') ? 0 : 1;
+
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
@@ -21,7 +23,7 @@ class _MorePageState extends State<MorePage> {
         children: [
           ListTile(
             title: Text(
-              'About the Rules',
+              AppLocalizations.of(context).aboutTheRules,
               style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'FreeSans',
@@ -35,7 +37,7 @@ class _MorePageState extends State<MorePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Rules Date',
+                  AppLocalizations.of(context).rulesDate,
                   style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
                 ),
                 Text('2020 v2.1',
@@ -54,7 +56,7 @@ class _MorePageState extends State<MorePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Rules Online',
+                    AppLocalizations.of(context).rulesOnline,
                     style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
                   ),
                   Text('https://bit.ly/3ggpkQL',
@@ -74,7 +76,7 @@ class _MorePageState extends State<MorePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Website',
+                    AppLocalizations.of(context).website,
                     style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
                   ),
                   Text('http://jjau.org/index.php?id=2',
@@ -85,7 +87,7 @@ class _MorePageState extends State<MorePage> {
           ),
           ListTile(
             title: Text(
-              'About this application',
+              AppLocalizations.of(context).aboutThisApplication,
               style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'FreeSans',
@@ -99,17 +101,19 @@ class _MorePageState extends State<MorePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Version',
+                  AppLocalizations.of(context).version,
                   style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
                 ),
-                Text('1.0.0',
-                    style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
+                Text(
+                  '1.0.0',
+                  style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
+                ),
               ],
             ),
           ),
           ListTile(
             title: Text(
-              'Change Language',
+              AppLocalizations.of(context).changeLanguage,
               style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'FreeSans',
@@ -123,19 +127,19 @@ class _MorePageState extends State<MorePage> {
               children: [
                 Center(
                   child: ToggleSwitch(
-                    minWidth: 90.0,
+                    minWidth: 110.0,
                     initialLabelIndex: initialIndex,
                     cornerRadius: 20.0,
                     activeFgColor: Colors.white,
                     inactiveBgColor: Colors.grey,
                     inactiveFgColor: Colors.white,
-                    labels: ['English', 'Mongolian'],
+                    labels: ['English', 'Монгол хэл'],
                     activeBgColors: [Colors.blue, Colors.pink],
                     onToggle: (index) {
                       setState(() {
                         index == 0
-                            ? language = 'English'
-                            : language = 'Mongolian';
+                            ? appLanguage.changeLanguage(Locale('en'))
+                            : appLanguage.changeLanguage(Locale('mn'));
                         initialIndex = index;
                       });
                     },
