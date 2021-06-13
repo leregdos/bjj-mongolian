@@ -23,6 +23,8 @@ environment:
 dependencies:
 
   font_awesome_flutter: ^9.0.0
+  flutter_localizations:
+    sdk: flutter
   flutter:
     sdk: flutter
 
@@ -33,6 +35,7 @@ dependencies:
   dropdown_below: ^0.0.7
   toggle_switch: ^0.1.9
   url_launcher: ^6.0.6
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
@@ -43,6 +46,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+
+  generate: true
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

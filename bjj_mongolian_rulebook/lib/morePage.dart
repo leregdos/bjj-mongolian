@@ -1,8 +1,7 @@
-import 'package:bjj_mongolian_rulebook/utilities/functions.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MorePage extends StatefulWidget {
   @override
@@ -98,12 +97,13 @@ class _MorePageState extends State<MorePage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  'Version',
-                  style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
-                ),
-                Text('1.0.0',
-                    style: TextStyle(fontSize: 16, fontFamily: 'FreeSans')),
+                Text(AppLocalizations.of(context).helloWorld)
+                // Text(
+                //   'Version',
+                //   style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
+                // ),
+                // Text('1.0.0',
+                //     style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),),
               ],
             ),
           ),
