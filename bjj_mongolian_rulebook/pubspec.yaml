@@ -32,6 +32,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   dropdown_below: ^0.0.7
   toggle_switch: ^0.1.9
+  url_launcher: ^6.0.6
 
 dev_dependencies:
   flutter_test:
