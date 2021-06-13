@@ -2,5 +2,11 @@
   "helloWorld": "Hello World!",
   "@helloWorld": {
     "description": "The conventional newborn programmer greeting"
-  }
+  },
+  "fouls": "Fouls",
+  "duration": "Duration",
+  "weight": "Weight",
+  "points": "Points",
+  "more": "More",
+  "rulebook": "Rulebook"
 }

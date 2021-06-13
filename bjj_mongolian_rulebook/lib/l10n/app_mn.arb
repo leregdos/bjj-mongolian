@@ -1,3 +1,9 @@
 {
-  "helloWorld": "Сайн байна уу!"
+  "helloWorld": "Сайн байна уу!",
+  "fouls": "Алдаа",
+  "duration": "Хугацаа",
+  "weight": "Жин",
+  "points": "Оноо",
+  "more": "Илүү",
+  "rulebook": "Дүрмийн ном"
 }

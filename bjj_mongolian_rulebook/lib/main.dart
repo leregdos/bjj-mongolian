@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate
       ],
       supportedLocales: [const Locale('en', ''), const Locale('mn', '')],
-      title: 'Flutter Demo',
+      title: 'BJJ Mongolian',
       theme: ThemeData(
         textTheme: TextTheme(
             headline6: TextStyle(
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.grey,
         bottomAppBarColor: Colors.grey,
       ),
-      home: BottomTab(title: 'Rulebook'),
+      home: BottomTab(title: AppLocalizations.of(context).rulebook),
     );
   }
 }
@@ -77,27 +77,27 @@ class _BottomTabState extends State<BottomTab> {
         items: [
           BottomNavigationBarItem(
             backgroundColor: Colors.grey,
-            label: "Fouls",
+            label: AppLocalizations.of(context).fouls,
             icon: Icon(FontAwesomeIcons.times),
           ),
           BottomNavigationBarItem(
             backgroundColor: Colors.grey,
-            label: "Duration",
+            label: AppLocalizations.of(context).duration,
             icon: Icon(FontAwesomeIcons.clock),
           ),
           BottomNavigationBarItem(
             backgroundColor: Colors.grey,
-            label: "Weight",
+            label: AppLocalizations.of(context).weight,
             icon: Icon(FontAwesomeIcons.weightHanging),
           ),
           BottomNavigationBarItem(
             backgroundColor: Colors.grey,
-            label: "Points",
+            label: AppLocalizations.of(context).points,
             icon: Icon(FontAwesomeIcons.check),
           ),
           BottomNavigationBarItem(
               icon: Icon(FontAwesomeIcons.commentDots),
-              label: "More",
+              label: AppLocalizations.of(context).more,
               backgroundColor: Colors.grey)
         ],
       ),

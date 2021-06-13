@@ -97,13 +97,14 @@ class _MorePageState extends State<MorePage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(AppLocalizations.of(context).helloWorld)
-                // Text(
-                //   'Version',
-                //   style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
-                // ),
-                // Text('1.0.0',
-                //     style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),),
+                Text(
+                  'Version',
+                  style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
+                ),
+                Text(
+                  '1.0.0',
+                  style: TextStyle(fontSize: 16, fontFamily: 'FreeSans'),
+                ),
               ],
             ),
           ),
