@@ -1,6 +1,7 @@
 import 'package:bjj_mongolian_rulebook/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FoulsPage extends StatefulWidget {
   @override
@@ -27,7 +28,7 @@ class _FoulsPageState extends State<FoulsPage> {
         children: [
           ListTile(
             title: Text(
-              'DIVISION',
+              AppLocalizations.of(context).division,
               style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'FreeSans',
@@ -43,7 +44,7 @@ class _FoulsPageState extends State<FoulsPage> {
           ),
           ListTile(
             title: Text(
-              'SEVERE TECHNICAL FOULS',
+              AppLocalizations.of(context).severeTechnicalFouls,
               style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'FreeSans',

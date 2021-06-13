@@ -12,5 +12,23 @@
   "website": "Вебсайт",
   "rulesOnline": "Онлайнаар үзэх",
   "rulesDate": "Дүрмийн огноо",
-  "aboutTheRules": "Дүрмийн талаар"
+  "aboutTheRules": "Дүрмийн талаар",
+  "twoPointsCaps": "2 оноо",
+  "threePointsCaps": "3 оноо",
+  "fourPointsCaps": "4 оноо",
+  "gender": "Хүйс",
+  "male": "Эр",
+  "female": "Эм",
+  "ageDivision": "Насны ангилал",
+  "weightDivisions": "Жингийн ангилал",
+  "division": "Ангилал",
+  "durationCaps": "Хугацаа",
+  "severeTechnicalFouls": "Техникийн алдаанууд",
+  "twoPoints": "2 оноо",
+  "threePoints": "3 оноо",
+  "fourPoints": "4 оноо",
+  "currentMinusBirth": "(Энэ жил) - (Төрсөн жил) >=",
+  "minutes": "минут"
+
+
 }

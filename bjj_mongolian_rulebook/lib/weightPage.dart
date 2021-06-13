@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:toggle_switch/toggle_switch.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class WeightPage extends StatefulWidget {
   @override
@@ -49,7 +50,7 @@ class _WeightPageState extends State<WeightPage> {
       children: [
         ListTile(
           title: Text(
-            'GENDER',
+            AppLocalizations.of(context).gender,
             style: TextStyle(
                 fontSize: 16,
                 fontFamily: 'FreeSans',
@@ -68,7 +69,10 @@ class _WeightPageState extends State<WeightPage> {
                 activeFgColor: Colors.white,
                 inactiveBgColor: Colors.grey,
                 inactiveFgColor: Colors.white,
-                labels: ['Male', 'Female'],
+                labels: [
+                  AppLocalizations.of(context).male,
+                  AppLocalizations.of(context).female
+                ],
                 icons: [FontAwesomeIcons.mars, FontAwesomeIcons.venus],
                 activeBgColors: [Colors.blue, Colors.pink],
                 onToggle: (index) {
@@ -83,7 +87,7 @@ class _WeightPageState extends State<WeightPage> {
         ),
         ListTile(
           title: Text(
-            'AGE DIVISION',
+            AppLocalizations.of(context).ageDivision,
             style: TextStyle(
                 fontSize: 16,
                 fontFamily: 'FreeSans',
@@ -99,7 +103,7 @@ class _WeightPageState extends State<WeightPage> {
         ),
         ListTile(
           title: Text(
-            'WEIGHT DIVISIONS',
+            AppLocalizations.of(context).weightDivisions,
             style: TextStyle(
                 fontSize: 16,
                 fontFamily: 'FreeSans',
@@ -178,7 +182,7 @@ class _WeightPageState extends State<WeightPage> {
           ),
           Container(
             child: Text(
-              '(Current year) - (Birth year) >= $age',
+              '${AppLocalizations.of(context).currentMinusBirth} $age',
               style: TextStyle(
                 fontSize: 13,
                 fontFamily: 'FreeSans',

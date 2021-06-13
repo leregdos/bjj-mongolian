@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DurationPage extends StatefulWidget {
   @override
@@ -29,7 +30,7 @@ class _DurationPageState extends State<DurationPage> {
       children: [
         ListTile(
           title: Text(
-            'DIVISION',
+            AppLocalizations.of(context).division,
             style: TextStyle(
                 fontSize: 16,
                 fontFamily: 'FreeSans',
@@ -45,7 +46,7 @@ class _DurationPageState extends State<DurationPage> {
         ),
         ListTile(
           title: Text(
-            'DURATION',
+            AppLocalizations.of(context).durationCaps,
             style: TextStyle(
                 fontSize: 16,
                 fontFamily: 'FreeSans',
@@ -60,7 +61,7 @@ class _DurationPageState extends State<DurationPage> {
               padding: const EdgeInsets.all(13.0),
               child: Container(
                 child: Text(
-                  '$duration minutes',
+                  '$duration ${AppLocalizations.of(context).minutes}',
                   style: TextStyle(
                     fontSize: 15,
                     fontFamily: 'FreeSans',
@@ -109,7 +110,7 @@ class _DurationPageState extends State<DurationPage> {
           ),
           Container(
             child: Text(
-              '(Current year) - (Birth year) >= $age',
+              '${AppLocalizations.of(context).currentMinusBirth} $age',
               style: TextStyle(
                 fontSize: 13,
                 fontFamily: 'FreeSans',
