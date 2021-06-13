@@ -10,6 +10,8 @@ class FoulsPage extends StatefulWidget {
 
 class _FoulsPageState extends State<FoulsPage> {
   String dropdownValue = 'All White Belts and All Belts (U18)';
+  String dropdownValueMn = 'Цагаан бүстнүүд болон бүх өнгийн U18';
+
   List<String> divisionList = [
     'U12',
     'U16',
@@ -17,6 +19,14 @@ class _FoulsPageState extends State<FoulsPage> {
     'Blue and Purple Belts (18+)',
     'Brown and Black Belts (18+)',
     'Expert',
+  ];
+  List<String> divisionListMn = [
+    'U12',
+    'U16',
+    'Цагаан бүстнүүд болон бүх өнгийн U18',
+    'Цэнхэр болон ягаан бүстнүүд (18+)',
+    'Бор болон хар бүстнүүд (18+)',
+    'Их мастер',
   ];
 
   @override

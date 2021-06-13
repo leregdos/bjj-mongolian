@@ -21,6 +21,7 @@ class _DurationPageState extends State<DurationPage> {
     'Masters'
   ];
   List<String> divisionListMn = [
+    'U8+',
     'U10+',
     'U14',
     'U14+',
@@ -108,9 +109,15 @@ class _DurationPageState extends State<DurationPage> {
               ),
               onChanged: (String newValue) {
                 setState(() {
-                  dropdownValue = newValue;
-                  age = ageList[divisionList.indexOf(newValue)];
-                  duration = durationList[divisionList.indexOf(newValue)];
+                  if (AppLocalizations.of(context).eng == 'English') {
+                    dropdownValue = newValue;
+                    age = ageList[divisionList.indexOf(newValue)];
+                    duration = durationList[divisionList.indexOf(newValue)];
+                  } else {
+                    dropdownValueMn = newValue;
+                    age = ageList[divisionListMn.indexOf(newValue)];
+                    duration = durationList[divisionListMn.indexOf(newValue)];
+                  }
                 });
               },
               items: AppLocalizations.of(context).eng == 'English'

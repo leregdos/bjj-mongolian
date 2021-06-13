@@ -50,6 +50,24 @@ class _WeightPageState extends State<WeightPage> {
     'Насанд хүрэгчид',
     'Мастерс'
   ];
+  Map maleWeightDivisionMn = {
+    'U10+': ['21', '24', '27', '30', '34', '38', '42', '42+'],
+    'U14': ['24', '27', '30', '34', '38', '42', '46', '50', '50+'],
+    'U14+': ['30', '34', '38', '42', '46', '50', '55', '60', '66', '66+'],
+    'U16+': ['38', '42', '46', '50', '55', '60', '66', '73', '73+'],
+    'U18+': ['46', '50', '55', '60', '66', '73', '81', '81+'],
+    'Насанд хүрэгчид': ['56', '62', '69', '77', '85', '94', '94+'],
+    'Мастерс': ['56', '62', '69', '77', '85', '94', '94+']
+  };
+  Map femaleWeightDivisionMn = {
+    'U10+': ['20', '22', '25', '28', '32', '36', '40', '40+'],
+    'U14': ['22', '25', '28', '32', '36', '40', '44', '48', '48+'],
+    'U14+': ['25', '28', '32', '36', '40', '44', '48', '52', '57', '57+'],
+    'U16+': ['32', '36', '40', '44', '48', '52', '57', '63', '63+'],
+    'U18+': ['40', '44', '48', '52', '57', '63', '70', '70+'],
+    'Насанд хүрэгчид': ['45', '48', '52', '57', '63', '70', '70+'],
+    'Мастерс': ['45', '48', '52', '57', '63', '70', '70+']
+  };
   List<int> ageList = [10, 12, 14, 16, 18, 18, 35];
   int age = 18;
   int initialIndex = 0;
@@ -122,39 +140,73 @@ class _WeightPageState extends State<WeightPage> {
           ),
         ),
         // gender == 'Male' ? maleWeightDivision[dropdownValue]
-        Expanded(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                for (var item in gender == 'Male'
-                    ? maleWeightDivision[dropdownValue]
-                    : femaleWeightDivision[dropdownValue])
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Card(
-                      elevation: 5.0,
-                      child: Padding(
-                        padding: const EdgeInsets.all(13.0),
-                        child: Center(
-                          child: Container(
-                            child: Text(
-                              '$item kg',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontFamily: 'FreeSans',
+        AppLocalizations.of(context).eng == 'English'
+            ? Expanded(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      for (var item in gender == 'Male'
+                          ? maleWeightDivision[dropdownValue]
+                          : femaleWeightDivision[dropdownValue])
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                          child: Card(
+                            elevation: 5.0,
+                            child: Padding(
+                              padding: const EdgeInsets.all(13.0),
+                              child: Center(
+                                child: Container(
+                                  child: Text(
+                                    '$item kg',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontFamily: 'FreeSans',
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                    ),
+                    ],
                   ),
-              ],
-            ),
-          ),
-        ),
+                ),
+              )
+            : Expanded(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      for (var item in gender == 'Male'
+                          ? maleWeightDivisionMn[dropdownValueMn]
+                          : femaleWeightDivisionMn[dropdownValueMn])
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                          child: Card(
+                            elevation: 5.0,
+                            child: Padding(
+                              padding: const EdgeInsets.all(13.0),
+                              child: Center(
+                                child: Container(
+                                  child: Text(
+                                    '$item kg',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontFamily: 'FreeSans',
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+              ),
       ],
     );
   }
@@ -181,8 +233,12 @@ class _WeightPageState extends State<WeightPage> {
               ),
               onChanged: (String newValue) {
                 setState(() {
-                  dropdownValue = newValue;
-                  age = ageList[divisionList.indexOf(newValue)];
+                  AppLocalizations.of(context).eng == 'English'
+                      ? dropdownValue = newValue
+                      : dropdownValueMn = newValue;
+                  age = AppLocalizations.of(context).eng == 'English'
+                      ? ageList[divisionList.indexOf(newValue)]
+                      : ageList[divisionListMn.indexOf(newValue)];
                 });
               },
               items: AppLocalizations.of(context).eng == 'English'
