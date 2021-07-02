@@ -64,112 +64,234 @@ class _FoulsPageState extends State<FoulsPage> {
           Expanded(
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
-              child: Column(
-                children: [
-                  if (dropdownValue == 'All White Belts and All Belts (U18)')
-                    for (var item in foulList)
-                      ListTile(
-                        title: Text('$item'),
-                        trailing: whiteFoul[foulList.indexOf(item)] == true
-                            ? Icon(
-                                FontAwesomeIcons.check,
-                                color: Colors.green,
-                              )
-                            : Icon(
-                                FontAwesomeIcons.times,
-                                color: Colors.red,
+              child: AppLocalizations.of(context).eng == 'English'
+                  ? Column(
+                      children: [
+                        if (dropdownValue ==
+                            'All White Belts and All Belts (U18)')
+                          for (var item in foulList)
+                            ListTile(
+                              title: Text('$item'),
+                              trailing:
+                                  whiteFoul[foulList.indexOf(item)] == true
+                                      ? Icon(
+                                          FontAwesomeIcons.check,
+                                          color: Colors.green,
+                                        )
+                                      : Icon(
+                                          FontAwesomeIcons.times,
+                                          color: Colors.red,
+                                        ),
+                              subtitle: Divider(
+                                color: Colors.grey,
                               ),
-                        subtitle: Divider(
-                          color: Colors.grey,
-                        ),
-                      ),
-                  if (dropdownValue == 'U12')
-                    for (var item in foulList)
-                      ListTile(
-                        title: Text('$item'),
-                        trailing: u12Foul[foulList.indexOf(item)] == true
-                            ? Icon(
-                                FontAwesomeIcons.check,
-                                color: Colors.green,
-                              )
-                            : Icon(
-                                FontAwesomeIcons.times,
-                                color: Colors.red,
+                            ),
+                        if (dropdownValue == 'U12')
+                          for (var item in foulList)
+                            ListTile(
+                              title: Text('$item'),
+                              trailing: u12Foul[foulList.indexOf(item)] == true
+                                  ? Icon(
+                                      FontAwesomeIcons.check,
+                                      color: Colors.green,
+                                    )
+                                  : Icon(
+                                      FontAwesomeIcons.times,
+                                      color: Colors.red,
+                                    ),
+                              subtitle: Divider(
+                                color: Colors.grey,
                               ),
-                        subtitle: Divider(
-                          color: Colors.grey,
-                        ),
-                      ),
-                  if (dropdownValue == 'U16')
-                    for (var item in foulList)
-                      ListTile(
-                        title: Text('$item'),
-                        trailing: u16Foul[foulList.indexOf(item)] == true
-                            ? Icon(
-                                FontAwesomeIcons.check,
-                                color: Colors.green,
-                              )
-                            : Icon(
-                                FontAwesomeIcons.times,
-                                color: Colors.red,
+                            ),
+                        if (dropdownValue == 'U16')
+                          for (var item in foulList)
+                            ListTile(
+                              title: Text('$item'),
+                              trailing: u16Foul[foulList.indexOf(item)] == true
+                                  ? Icon(
+                                      FontAwesomeIcons.check,
+                                      color: Colors.green,
+                                    )
+                                  : Icon(
+                                      FontAwesomeIcons.times,
+                                      color: Colors.red,
+                                    ),
+                              subtitle: Divider(
+                                color: Colors.grey,
                               ),
-                        subtitle: Divider(
-                          color: Colors.grey,
-                        ),
-                      ),
-                  if (dropdownValue == 'Blue and Purple Belts (18+)')
-                    for (var item in foulList)
-                      ListTile(
-                        title: Text('$item'),
-                        trailing: bluePurpleFoul[foulList.indexOf(item)] == true
-                            ? Icon(
-                                FontAwesomeIcons.check,
-                                color: Colors.green,
-                              )
-                            : Icon(
-                                FontAwesomeIcons.times,
-                                color: Colors.red,
+                            ),
+                        if (dropdownValue == 'Blue and Purple Belts (18+)')
+                          for (var item in foulList)
+                            ListTile(
+                              title: Text('$item'),
+                              trailing:
+                                  bluePurpleFoul[foulList.indexOf(item)] == true
+                                      ? Icon(
+                                          FontAwesomeIcons.check,
+                                          color: Colors.green,
+                                        )
+                                      : Icon(
+                                          FontAwesomeIcons.times,
+                                          color: Colors.red,
+                                        ),
+                              subtitle: Divider(
+                                color: Colors.grey,
                               ),
-                        subtitle: Divider(
-                          color: Colors.grey,
-                        ),
-                      ),
-                  if (dropdownValue == 'Brown and Black Belts (18+)')
-                    for (var item in foulList)
-                      ListTile(
-                        title: Text('$item'),
-                        trailing: brownBlackFoul[foulList.indexOf(item)] == true
-                            ? Icon(
-                                FontAwesomeIcons.check,
-                                color: Colors.green,
-                              )
-                            : Icon(
-                                FontAwesomeIcons.times,
-                                color: Colors.red,
+                            ),
+                        if (dropdownValue == 'Brown and Black Belts (18+)')
+                          for (var item in foulList)
+                            ListTile(
+                              title: Text('$item'),
+                              trailing:
+                                  brownBlackFoul[foulList.indexOf(item)] == true
+                                      ? Icon(
+                                          FontAwesomeIcons.check,
+                                          color: Colors.green,
+                                        )
+                                      : Icon(
+                                          FontAwesomeIcons.times,
+                                          color: Colors.red,
+                                        ),
+                              subtitle: Divider(
+                                color: Colors.grey,
                               ),
-                        subtitle: Divider(
-                          color: Colors.grey,
-                        ),
-                      ),
-                  if (dropdownValue == 'Expert')
-                    for (var item in foulList)
-                      ListTile(
-                        title: Text('$item'),
-                        trailing: expertFoul[foulList.indexOf(item)] == true
-                            ? Icon(
-                                FontAwesomeIcons.check,
-                                color: Colors.green,
-                              )
-                            : Icon(
-                                FontAwesomeIcons.times,
-                                color: Colors.red,
+                            ),
+                        if (dropdownValue == 'Expert')
+                          for (var item in foulList)
+                            ListTile(
+                              title: Text('$item'),
+                              trailing:
+                                  expertFoul[foulList.indexOf(item)] == true
+                                      ? Icon(
+                                          FontAwesomeIcons.check,
+                                          color: Colors.green,
+                                        )
+                                      : Icon(
+                                          FontAwesomeIcons.times,
+                                          color: Colors.red,
+                                        ),
+                              subtitle: Divider(
+                                color: Colors.grey,
                               ),
-                        subtitle: Divider(
-                          color: Colors.grey,
-                        ),
-                      ),
-                ],
-              ),
+                            ),
+                      ],
+                    )
+                  : Column(
+                      children: [
+                        if (dropdownValueMn ==
+                            'Цагаан бүстнүүд болон бүх өнгийн U18')
+                          for (var item in foulListMn)
+                            ListTile(
+                              title: Text('$item'),
+                              trailing:
+                                  whiteFoul[foulListMn.indexOf(item)] == true
+                                      ? Icon(
+                                          FontAwesomeIcons.check,
+                                          color: Colors.green,
+                                        )
+                                      : Icon(
+                                          FontAwesomeIcons.times,
+                                          color: Colors.red,
+                                        ),
+                              subtitle: Divider(
+                                color: Colors.grey,
+                              ),
+                            ),
+                        if (dropdownValueMn == 'U12')
+                          for (var item in foulListMn)
+                            ListTile(
+                              title: Text('$item'),
+                              trailing:
+                                  u12Foul[foulListMn.indexOf(item)] == true
+                                      ? Icon(
+                                          FontAwesomeIcons.check,
+                                          color: Colors.green,
+                                        )
+                                      : Icon(
+                                          FontAwesomeIcons.times,
+                                          color: Colors.red,
+                                        ),
+                              subtitle: Divider(
+                                color: Colors.grey,
+                              ),
+                            ),
+                        if (dropdownValueMn == 'U16')
+                          for (var item in foulListMn)
+                            ListTile(
+                              title: Text('$item'),
+                              trailing:
+                                  u16Foul[foulListMn.indexOf(item)] == true
+                                      ? Icon(
+                                          FontAwesomeIcons.check,
+                                          color: Colors.green,
+                                        )
+                                      : Icon(
+                                          FontAwesomeIcons.times,
+                                          color: Colors.red,
+                                        ),
+                              subtitle: Divider(
+                                color: Colors.grey,
+                              ),
+                            ),
+                        if (dropdownValueMn ==
+                            'Цэнхэр болон ягаан бүстнүүд (18+)')
+                          for (var item in foulListMn)
+                            ListTile(
+                              title: Text('$item'),
+                              trailing:
+                                  bluePurpleFoul[foulListMn.indexOf(item)] ==
+                                          true
+                                      ? Icon(
+                                          FontAwesomeIcons.check,
+                                          color: Colors.green,
+                                        )
+                                      : Icon(
+                                          FontAwesomeIcons.times,
+                                          color: Colors.red,
+                                        ),
+                              subtitle: Divider(
+                                color: Colors.grey,
+                              ),
+                            ),
+                        if (dropdownValueMn == 'Бор болон хар бүстнүүд (18+)')
+                          for (var item in foulListMn)
+                            ListTile(
+                              title: Text('$item'),
+                              trailing:
+                                  brownBlackFoul[foulListMn.indexOf(item)] ==
+                                          true
+                                      ? Icon(
+                                          FontAwesomeIcons.check,
+                                          color: Colors.green,
+                                        )
+                                      : Icon(
+                                          FontAwesomeIcons.times,
+                                          color: Colors.red,
+                                        ),
+                              subtitle: Divider(
+                                color: Colors.grey,
+                              ),
+                            ),
+                        if (dropdownValueMn == 'Их мастер')
+                          for (var item in foulListMn)
+                            ListTile(
+                              title: Text('$item'),
+                              trailing:
+                                  expertFoul[foulListMn.indexOf(item)] == true
+                                      ? Icon(
+                                          FontAwesomeIcons.check,
+                                          color: Colors.green,
+                                        )
+                                      : Icon(
+                                          FontAwesomeIcons.times,
+                                          color: Colors.red,
+                                        ),
+                              subtitle: Divider(
+                                color: Colors.grey,
+                              ),
+                            ),
+                      ],
+                    ),
             ),
           ),
         ],
@@ -180,36 +302,69 @@ class _FoulsPageState extends State<FoulsPage> {
   Widget buildDropdownButton() {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Container(
-            child: DropdownButton<String>(
-              value: dropdownValue,
-              icon: const Icon(Icons.arrow_downward),
-              iconSize: 24,
-              elevation: 16,
-              style: const TextStyle(
-                  color: Colors.deepPurple, fontFamily: 'FreeSans'),
-              underline: Container(
-                height: 2,
-                color: Colors.deepPurpleAccent,
-              ),
-              onChanged: (String newValue) {
-                setState(() {
-                  dropdownValue = newValue;
-                });
-              },
-              items: divisionList.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
+      child: AppLocalizations.of(context).eng == 'English'
+          ? Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Container(
+                  child: DropdownButton<String>(
+                    value: dropdownValue,
+                    icon: const Icon(Icons.arrow_downward),
+                    iconSize: 24,
+                    elevation: 16,
+                    style: const TextStyle(
+                        color: Colors.deepPurple, fontFamily: 'FreeSans'),
+                    underline: Container(
+                      height: 2,
+                      color: Colors.deepPurpleAccent,
+                    ),
+                    onChanged: (String newValue) {
+                      setState(() {
+                        dropdownValue = newValue;
+                      });
+                    },
+                    items: divisionList
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                  ),
+                ),
+              ],
+            )
+          : Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Container(
+                  child: DropdownButton<String>(
+                    value: dropdownValueMn,
+                    icon: const Icon(Icons.arrow_downward),
+                    iconSize: 24,
+                    elevation: 16,
+                    style: const TextStyle(
+                        color: Colors.deepPurple, fontFamily: 'FreeSans'),
+                    underline: Container(
+                      height: 2,
+                      color: Colors.deepPurpleAccent,
+                    ),
+                    onChanged: (String newValue) {
+                      setState(() {
+                        dropdownValueMn = newValue;
+                      });
+                    },
+                    items: divisionListMn
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                  ),
+                ),
+              ],
             ),
-          ),
-        ],
-      ),
     );
   }
 }
